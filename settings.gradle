@@ -1,0 +1,3 @@
+rootProject.name = 'boards'
+include 'Automation'
+
