@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Login extends BasePageObject<Login> {
+public class LoginPage extends BasePageObject<LoginPage> {
 
     private static final String URL = "http://olimptrade.com/ru-ru/home";
     private By modalWindow = By.xpath("//*[@id=\"header\"]/div/div[2]/div/div/div/a");
@@ -11,7 +11,7 @@ public class Login extends BasePageObject<Login> {
     private By signInButton = By.xpath("//*[@id=\"auth\"]/div[2]/form/div[5]/button");
 
 
-    public Login(WebDriver webDriver) {
+    public LoginPage(WebDriver webDriver) {
         super(webDriver);
     }
 

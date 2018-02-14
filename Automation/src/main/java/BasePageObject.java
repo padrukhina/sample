@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class BasePageObject<T> {
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -28,5 +30,10 @@ public class BasePageObject<T> {
 
     public void click(By element) {
         find(element).click();
+    }
+
+    public void clickFirstItem(By element) {
+        List<WebElement> indicatorsList = driver.findElements(element);
+        indicatorsList.stream().findFirst().ifPresent(e -> e.click());
     }
 }
